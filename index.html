@@ -1,0 +1,146 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WebJob — Creamos páginas web sencillas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="WebJob - Páginas web simples y funcionales para negocios y proyectos.">
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar">
+      <a href="index.html" class="brand" aria-label="WebJob home">
+        <div class="logo"><img src="img/Logo.png" alt="Logo WebJob"></div>
+        <h1>WebJob</h1>
+      </a>
+
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="cta">Contáctanos</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav">☰</button>
+    </nav>
+
+    <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+      <a href="index.html">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero section" id="inicio" aria-labelledby="heroTitle">
+      <div class="intro">
+        <h2 id="heroTitle">Creamos páginas web simples y funcionales</h2>
+        <p class="kv">WebJob — soluciones rápidas y claras para que tu negocio tenga presencia online sin complicaciones.</p>
+        <p><a href="contacto.html" class="cta">Cuéntanos</a></p>
+        <p class="small">Estamos iniciando, pero hacemos trabajos reales y rápidos.</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="mock-browser">
+          <div class="top"><div class="dots"></div><div class="dots" style="background:#ffbd2e"></div><div class="dots" style="background:#28c940"></div></div>
+          <div style="height:180px;border-radius:8px;background:linear-gradient(180deg,#111,#0b0b0b);display:flex;align-items:center;justify-content:center;color:var(--muted)">
+            <div style="text-align:center">
+              <div style="font-weight:700;color:var(--accent);font-size:1rem">WebJob</div>
+              <div style="margin-top:8px;color:var(--muted)">Página simple, menú, secciones y contacto.</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:0.9rem;color:var(--muted);margin-top:0.5rem">Se entrega en archivos listos para subir (HTML + CSS). Podemos adaptar colores y textos.</div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicios" class="section container">
+      <h3 style="margin-bottom:0.6rem">Nuestro Proyecto</h3>
+      <p class="small kv">Qué hacemos?</p>
+
+      <div class="services-grid" style="margin-top:1rem">
+        <div class="service card">
+          <h3>Páginas web básicas</h3>
+          <p>Creamos páginas sencillas para mostrar tu negocio o idea: inicio, servicios, contacto y galería (si es necesario).</p>
+        </div>
+
+        <div class="service card">
+          <h3>Diseños personalizables</h3>
+          <p>Usamos plantillas que adaptamos: cambiamos colores, tipografías y secciones para que se parezca a tu marca.</p>
+        </div>
+
+        <div class="service card">
+          <h3>Entrega rápida</h3>
+          <p>Si la necesitas pronto, podemos armar una página en pocos días. Ideal para proyectos que deben salir ya.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO / DEMOS -->
+    <section class="section container">
+      <h3>Servicios</h3>
+      <p class="kv small">Qué tipo de páginas web hacemos?</p>
+
+      <div class="portfolio-grid" style="margin-top:1rem">
+        <div class="card-demo">
+          <div>
+            <strong>Portafolio / galería de productos</strong>
+            <div class="meta">Para negocios que quieren mostrar sus trabajos o productos.</div>
+          </div>
+          <div class="small">Ejemplo: una panadería mostrando pasteles, un fotógrafo mostrando fotos.</div>
+        </div>
+
+        <div class="card-demo">
+          <div>
+            <strong>Página Promocional</strong>
+            <div class="meta">Una página sencilla para promocionar un producto o evento.</div>
+          </div>
+          <div class="small">Ideal para mostrar un producto nuevo o una oferta especial.</div>
+        </div>
+
+        <div class="card-demo">
+          <div>
+            <strong>Página informativa / corporativa</strong>
+            <div class="meta">Muestra quién es el negocio, servicios, horario, ubicación.</div>
+          </div>
+          <div class="small">Ejemplo: Página de un café, peluquería o tienda local.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="section container" style="margin-top:1.6rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div>
+        <h3>¿Listo para tu página?</h3>
+        <p class="small kv">Contactanos y te damos una idea de cómo podría quedar.</p>
+      </div>
+      <div>
+        <a class="cta" href="contacto.html">Empecemos</a>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div class="small kv">© <span id="year"></span> WebJob · Hecho por estudiantes/emprendedores</div>
+    </footer>
+  </main>
+
+  <script>
+    // Pequeño script para menú móvil y año dinámico
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    menuToggle.addEventListener('click', () => {
+      const isShown = mobileNav.classList.toggle('show');
+      menuToggle.setAttribute('aria-expanded', isShown);
+      mobileNav.setAttribute('aria-hidden', !isShown);
+    });
+
+    // año en footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!-- contacto.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto — WebJob</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <div class="logo"><img src="img/Logo.png" alt="Logo WebJob"></div>
+        <h1>WebJob</h1>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="cta">Contáctanos</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle3">☰</button>
+    </nav>
+    <div id="mobileNav3" class="mobile-nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Contáctanos</h2>
+      <p class="kv small">Escríbenos y te responderemos lo más pronto posible.</p>
+
+      <div class="contact-grid" style="margin-top:1rem">
+        <div class="card">
+          <form id="contactForm" action="#" onsubmit="handleSubmit(event)">
+            <label for="name" class="small">Nombre</label>
+            <input id="name" name="name" placeholder="Tu nombre" required />
+
+            <label for="telefono" class="small">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+## ### ####" required />
+
+            <label for="email" class="small">Email</label>
+            <input id="email" name="email" type="email" placeholder="tu@ejemplo.com" required />
+
+            <label for="message" class="small">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos brevemente qué necesitas" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h3>Otras formas de contacto</h3>
+          <p class="kv small">WhatsApp/Teléfono: <strong>+57 310 3429370</strong></p>
+          <p class="kv small">Email: <strong>empreswebjob@gmail.com</strong></p>
+          <p class="kv small">También respondemos por redes sociales</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="container" style="margin-top:1.6rem">
+      <div class="small kv">© <span id="year3"></span> WebJob</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+    const menuToggle3 = document.getElementById('menuToggle3');
+    const mobileNav3 = document.getElementById('mobileNav3');
+    menuToggle3.addEventListener('click', ()=> mobileNav3.classList.toggle('show'));
+
+    function handleSubmit(e){
+      e.preventDefault();
+      // Aquí puedes conectar con un backend o usar Formspree / Google Forms.
+      alert('Gracias — tu mensaje fue registrado. (Este formulario es demo; conecta con tu backend para recibir mensajes reales.)');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

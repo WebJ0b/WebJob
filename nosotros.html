@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nosotros — WebJob</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <div class="logo"><img src="img/Logo.png" alt="Logo WebJob"></div>
+        <h1>WebJob</h1>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="nosotros.html" class="active">Nosotros</a>
+        <a href="contacto.html" class="cta">Contáctanos</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle2">☰</button>
+    </nav>
+
+    <div id="mobileNav2" class="mobile-nav" aria-hidden="true">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Nosotros</h2>
+      <p class="small kv">Somos WebJob: Estudiantes que diseñamos páginas web sencillas y funcionales.</p>
+
+      <!-- GRID PRINCIPAL: IZQUIERDA (info) | DERECHA (lateral) -->
+      <div class="about-grid" style="margin-top:1rem">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div>
+          <div class="card">
+            <h3>Quiénes somos</h3>
+            <p class="kv small">
+              Somos un equipo de estudiantes que aprende creando páginas web prácticas para negocios y proyectos.
+            </p>
+            <p class="kv small">
+              Empezamos con un proyecto para el colegio y ahora ofrecemos páginas sencillas y claras para quien la necesite.
+            </p>
+          </div>
+
+          <div class="card" style="margin-top:1rem">
+            <h3>Nuestro enfoque</h3>
+            <p class="kv small">
+              Entregamos páginas útiles que cumplen la función principal: tener presencia en internet. Nos centramos en lo esencial para que no pagues por cosas innecesarias.
+            </p>
+          </div>
+
+          <!-- AQUI VA LA CAJA DE INTEGRANTES (dentro de la columna izquierda) -->
+          <div class="integrantes" style="margin-top:1rem">
+            <h3>Integrantes del Proyecto</h3>
+
+            <div class="integrantes-grid" style="margin-top:0.8rem">
+              <div class="integrante-card">
+                <h3>Jair Pedraza</h3>
+                <p>Estudiante de Grado 11 - Desarrollador</p>
+              </div>
+
+              <div class="integrante-card">                
+                <h3>Joel Rodríguez</h3>
+                <p>Estudiante de Grado 11 - Desarrollador</p>
+              </div>
+
+              <div class="integrante-card">
+                <h3>Juan Urquijo</h3>
+                <p>Estudiante de Grado 11 - Lider del Proyecto</p>
+              </div>
+            </div>
+          </div>
+          <!-- FIN INTEGRANTES (columna izquierda) -->
+
+        </div> <!-- fin columna izquierda -->
+
+        <!-- COLUMNA DERECHA (aside) -->
+        <aside>
+          <div class="card">
+            <h3>Misión y Visión</h3>
+            <div class="mission-vision" style="margin-top:0.6rem">
+              <div class="box">
+                <h4>Misión</h4>
+                <p class="kv small">Nuestra misión es ofrecer soluciones de diseño de páginas web originales e innovadoras, personalizadas para cada cliente, para satisfacer sus necesidades específicas.</p>
+              </div>
+
+              <div class="box" style="margin-top:0.7rem">
+                <h4>Visión</h4>
+                <p class="kv small">Nuestra visión es ser reconocidos como líderes en la creación de páginas web innovadoras a nivel regional para 2029.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:1rem">
+            <h3>Valores / Qué ofrecemos</h3>
+            <ul class="kv small">
+              <li>Honestidad en lo que podemos y no podemos hacer</li>
+              <li>Entrega rápida</li>
+              <li>Diseño claro y fácil de usar</li>
+              <li>Comunicación directa con el cliente</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div> <!-- fin about-grid -->
+    </section>
+
+    <footer class="container" style="margin-top:1.6rem">
+      <div class="small kv">© <span id="year2"></span> WebJob</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+    const menuToggle2 = document.getElementById('menuToggle2');
+    const mobileNav2 = document.getElementById('mobileNav2');
+    menuToggle2.addEventListener('click', ()=> mobileNav2.classList.toggle('show'));
+  </script>
+</body>
+</html>
